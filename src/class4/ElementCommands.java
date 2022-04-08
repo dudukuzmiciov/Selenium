@@ -7,8 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ElementCommands {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver","drivers/chromedriver");
-        WebDriver driver =new ChromeDriver();//this is launging browser
+        System.setProperty("webdriver.chrome.driver","drivers/chromedriver");//set property identify the driver u'll use
+        WebDriver driver =new ChromeDriver();//this is launging browser/ creating an obj of the driver
         driver.get("http://www.uitestpractice.com/Students/Form");
         WebElement marriedRadioButton=driver.findElement(By.xpath("(//input[@name = 'optradio'])[1]"));
         boolean isMarriedRadioButton = marriedRadioButton.isEnabled();

@@ -20,6 +20,8 @@ public class DropDownHandling {
 
         //Thread.sleep(2000);
         //select.selectByVisibleText("Thursday");
+        /*selectByVisibleText is when you locate by the actual text you
+         see in  the checkbox without inspecting. one of the options in the box ex" Mon, Tue, Wed....*/
         //Thread.sleep(1000);
         //select.selectByValue("Sunday");
 
@@ -33,6 +35,8 @@ public class DropDownHandling {
         for(int i=0; i<size;i++){
             String option= allOptions.get(i).getText();//get text for each element
             System.out.println(option);
+            select.selectByIndex(i);
+            Thread.sleep(1000);
 
         }
 }

@@ -1,0 +1,24 @@
+package class6;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class HW2 {
+    /*Go to https://syntaxprojects.com/javascript-alert-box-demo.php
+     click on each button and handle the alert accordingly */
+    public static String url = "https://syntaxprojects.com/javascript-alert-box-demo.php";
+
+    public static void main(String[] args) throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.get(url);
+        WebElement alertButton = driver.findElement(By.xpath("//button[@class= 'btn btn-default']/parent::div"));
+        alertButton.click();
+        Alert simpleAlert = driver.switchTo().alert();
+        Thread.sleep(1000);
+        simpleAlert.accept();
+    }
+}

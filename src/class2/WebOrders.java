@@ -11,7 +11,7 @@ public class WebOrders {
         WebDriver driver = new ChromeDriver();
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
 
-        WebElement username =driver.findElement(By.id("ctl00_MainContent_username"));//username /we get an element in return.
+        WebElement username =driver.findElement(By.id("ctl00_MainContent_username"));//username /we get an web element in return.
         username.sendKeys("Tester");
         WebElement password=driver.findElement(By.id("ctl00_MainContent_password")); //password
         password.sendKeys("test");

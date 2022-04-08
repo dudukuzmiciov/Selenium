@@ -6,8 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class MaximizeWindow {
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver","drivers/chromedriver"); //lounge the browser
-        WebDriver driver= new ChromeDriver(); //creating the instance of chrome driver
+        System.setProperty("webdriver.chrome.driver","drivers/chromedriver"); //launch the browser (driver location)
+        WebDriver driver= new ChromeDriver(); //creating the instance of chrome driver (object of the driver)
         driver.navigate().to("https://www.amazon.com");
         //navigate() can go back and forward and refresh and will keep the history of browser
         //get() waits for the page to fully load whereas navigate() will not

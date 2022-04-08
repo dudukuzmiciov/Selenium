@@ -14,14 +14,18 @@ public class MultipleSelectDD {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
-
         driver.get(url);
+
         WebElement statesDD = driver.findElement(By.name("States"));//using element it is a single dropdown to identify
-        Select select = new Select(statesDD);
-        boolean isMultiple = select.isMultiple();
+        //we can use Select class because our element has select tag
+        Select select = new Select(statesDD); //create an object inside () is the element
+        //check if the select class has multiple values or no:
+        boolean isMultiple = select.isMultiple();//true-multiple select Dropdown
         System.out.println(isMultiple);
+        //only if the value is true we can interact with it:
         if (isMultiple) {
             List<WebElement> options = select.getOptions();
+            //iterating through the web elements:
             for (WebElement option : options) {
                 String optionText = option.getText();
                 select.selectByVisibleText(optionText);
